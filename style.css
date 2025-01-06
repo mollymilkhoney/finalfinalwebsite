@@ -158,8 +158,12 @@ h2 { /*logo top left & page titles */
 }
 
 p { /*general all paragraphs */
-    font-size: 0.7;
+    font-size: 0.8em;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+b {
+    color: #ff0099;
 }
 
 /* ---------------------------------------------------------------*/
@@ -168,7 +172,7 @@ p { /*general all paragraphs */
 main {
     background: url("beethatidrew-curser.png") no-repeat; 
     background-color: #ffffff;
-    background-size: 100px; /* changes size of the bee */
+    background-size: 60px; /* changes size of the bee */
     background-position: center; /* changes position of the bee */
     grid-area: main; /* define the grid area */
     display: flex;
@@ -195,44 +199,27 @@ main {
 .headshot {
     width: 300px;
     border-radius: 40px;
+    border: 2px solid #ff0099;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* drop shadow */
 }
 
-.adventcalendar {
-	height: 100px;
-    width: 300px;
-	margin: 0;
-    padding: 10px;
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	justify-content: center;
-	background-color: transparent;
-}
 
 #column3 {
-    padding-left: 30px;
-    padding-bottom: 20px;
+    background-color: transparent;
+    grid-area: column3;
+    max-width: 550px;
+    padding: 5px 5px; /*top&bottom right bottom left*/
 }
 
-#present1,
-#present2,
-#present3,
-#present4,
-#present5,
-#present6,
-#present7,
-#present8,
-#present9,
-#present10 {
-	font-size: 2rem;
-	margin: auto;
+.wildgypsy {
+    max-width: 400px;
 }
-
 
 /* ---------------------------------------------------------------*/
 /*starts the footer section */
 footer {
     font-size: 0.9em;
-    background-color: #ffffff;
+    background-color: white;
     align-items: center; /* centers items vertically in section */
     grid-area: footer; /* define the grid area (for mobile) */
     display: flex;
@@ -264,51 +251,8 @@ author {
     filter: invert(2) hue-rotate(180deg) !important;
 }
 
-.invert-colors #present1 {
-    filter: invert(2) hue-rotate(180deg) !important;
-}
 
-.invert-colors #present2 {
-    filter: invert(2) hue-rotate(180deg) !important;
-}
-
-.invert-colors #present3 {
-    filter: invert(2) hue-rotate(180deg) !important;
-}
-
-.invert-colors #present4 {
-    filter: invert(2) hue-rotate(180deg) !important;
-}
-
-.invert-colors #present5 {
-    filter: invert(2) hue-rotate(180deg) !important;
-}
-
-.invert-colors #present6 {
-    filter: invert(2) hue-rotate(180deg) !important;
-}
-
-.invert-colors #present7 {
-    filter: invert(2) hue-rotate(180deg) !important;
-}
-
-.invert-colors #present8 {
-    filter: invert(2) hue-rotate(180deg) !important;
-}
-
-.invert-colors #present9 {
-    filter: invert(2) hue-rotate(180deg) !important;
-}
-
-.invert-colors #present10 {
-    filter: invert(2) hue-rotate(180deg) !important;
-}
-
-.invert-colors .holidays {
-    filter: invert(2) hue-rotate(180deg) !important;
-}
-
-
+/*----------------------------------------------------------------------------*/
 /*two objects below are for transition js of the about & traits sections*/
 .hidden {
     opacity: 0;
@@ -322,24 +266,6 @@ author {
 }
 
 
-/*---------------------------------------------------------*/
-/*starts contact form css */
 
-#contact-form {
-    padding-left: 5%;
-    min-width: 100vw;
-}
 
-#submit,
-#message,
-#email,
-#name {
-    border: 1px solid #ff0099;
-    color: #000000;
-    background-color: #ffffff;
-}
-
-#submit:hover {
-    background-color: #000000;
-}
 
