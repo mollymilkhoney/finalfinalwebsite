@@ -4,7 +4,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto; /* header, main, footer (1fr is 1 fraction) */
     grid-template-areas: "header" "main" "main2" "main3" "main4" "main5" "footer";   /* to define grid areas (for mobile) */
-    overflow: scroll; /* prevent scrolling on desktop put hidden*/
+    overflow-x: hidden; overflow-y: auto; /* prevent scrolling on desktop put hidden on both x & y*/
     min-height: 100vh;
     margin: 0%;
     font-family: Arial, Helvetica, sans-serif;
@@ -20,20 +20,23 @@ body {
         text-align: center;
     }
 
-    main {
+    main,
+    main2,
+    main3,
+    main4 {
         background-image: none !important;
         flex-wrap: wrap;
         max-width: 100% !important;
         justify-content: center;
-        overflow: scroll;
+        overflow-x: hidden; overflow-y: auto;
     }
 
-    form {
-        background-image: none !important;
-        flex-wrap: wrap;
-        min-width: 100% !important;
-        max-height: 100vh;
-        justify-content: center;
+    iframe {
+        display: none !important;
+    }
+
+    main5 {
+        display: none !important;
     }
 
     author {
@@ -43,6 +46,10 @@ body {
 
     h3 { 
         font-size: 100% !important; 
+    }
+
+    nav {
+        max-width: 100% !important;
     }
 
     nav:hover,
@@ -62,6 +69,13 @@ body {
         padding: 0 0 20px 0;
     }
 
+    .headshot {
+        max-width: 100% !important;
+    }
+
+    .crossbutterfly {
+        max-width: 100% !important;
+    }
 } /*end @media block for mobile */
 
 
@@ -186,6 +200,7 @@ main {
     flex-direction: row;
     align-items: center; /* centers items vertically in section */
     padding-top: 30px; 
+    justify-content: center; /* centers content horizontally */
 }
 
 main2 {
@@ -199,6 +214,7 @@ main2 {
     padding-right: 60px;
     display: flex;
     flex-direction: row;
+    justify-content: center; /* centers content horizontally */
 }
 
 #descriptions {
@@ -218,6 +234,7 @@ main3 {
     padding-right: 60px;
     display: flex;
     flex-direction: row;
+    justify-content: center; /* centers content horizontally */
 }
 
 main4 {
@@ -231,6 +248,7 @@ main4 {
     padding-right: 60px;
     display: flex;
     flex-direction: row;
+    justify-content: center; /* centers content horizontally */
 }
 
 main5 {
@@ -245,7 +263,7 @@ main5 {
     display: flex;
     flex-direction: row;
     display: flex;
-    justify-content: center; /* Centers content horizontally */
+    justify-content: center; /* centers content horizontally */
     align-items: center; 
 }
 
@@ -272,6 +290,8 @@ main5 {
     background: url('leopardwhitespotsvg.svg') repeat; /* apply your SVG as the border */
     background-size: cover; /* adjusts the size of the zig-zag */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* drop shadow */
+    width: 100%; 
+    max-width: 300px;
 }
 
 
@@ -284,6 +304,7 @@ main5 {
 
 .crossbutterfly {
     max-width: 400px;
+    width: 100%; 
 }
 
 /* ---------------------------------------------------------------*/
@@ -293,6 +314,7 @@ main5 {
   overflow-x: auto; /* enables horizontal scrolling */
   white-space: nowrap; /* prevents images from wrapping */
   scroll-behavior: smooth; /* smooth scrolling */
+  max-width: 100%;
 }
 
 .carousel-track img {
@@ -322,9 +344,10 @@ footer {
     align-items: center; /* centers items vertically in section */
     grid-area: footer; /* define the grid area (for mobile) */
     display: flex;
-    justify-content: right;
+    justify-content: center;
     padding: 10px 20px 0 20px;
     flex-wrap: wrap;
+    max-width: 100%;
 }
 
 author {
@@ -386,7 +409,7 @@ author {
   
   /* optional: Style the thumb when hovered */
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #f5d9ed; /* darker shade on hover */
+    background-color: #000000; /* darker shade on hover */
   }
 
 
